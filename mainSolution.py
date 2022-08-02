@@ -1,5 +1,6 @@
 from heapq import heapify
 from http.client import GATEWAY_TIMEOUT
+from select import KQ_NOTE_LINK
 
 
 <<<<<<< HEAD
@@ -22,4 +23,9 @@ how can i be homophobic, my bitch is gay
 =======
 makkau GAy 
 >>>>>>> 3108d1aa0013ebffa499283b0b1e1183c60f2350
+<<<<<<< HEAD
 z
+=======
+poopoopeepee
+konek
+>>>>>>> 33b42127edfd6edefb7d014a84d208d79c2b3699
