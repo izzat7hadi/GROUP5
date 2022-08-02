@@ -1,4 +1,5 @@
 from http.client import GATEWAY_TIMEOUT
+from select import KQ_NOTE_LINK
 
 
 <<<<<<< HEAD
@@ -21,4 +22,5 @@ how can i be homophobic, my bitch is gay
 =======
 makkau GAy 
 >>>>>>> 3108d1aa0013ebffa499283b0b1e1183c60f2350
+poopoopeepee
 konek
