@@ -1,5 +1,5 @@
 from http.client import GATEWAY_TIMEOUT
-from select import KQ_NOTE_LINK
+from http.cookies import BaseCookie
 
 
 <<<<<<< HEAD
@@ -10,9 +10,6 @@ dannish sucks
 HELLO WORLD
 peepeepoopoo
 <<<<<<< HEAD
-hhh
-=======
-<<<<<<< HEAD
 ihij
 =======
 >>>>>>> 87e49716d6443bed09c150268a7943f407841b01
@@ -22,5 +19,5 @@ how can i be homophobic, my bitch is gay
 =======
 makkau GAy 
 >>>>>>> 3108d1aa0013ebffa499283b0b1e1183c60f2350
-poopoopeepee
-konek
+pukimak
+buto tak base puki 
