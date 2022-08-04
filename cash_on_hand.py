@@ -6,19 +6,23 @@ from pkg_resources import empty_provider
 
 =======
 import api
+<<<<<<< HEAD
+coh=Path.cwd()/"csv_reports"/"cash-on-hand-usd.csv"
+=======
 >>>>>>> 850e156af8ee6ca43f5fc6cd0726930ce4aaf242
 pal=Path.cwd()/"csv_reports"/"cash-on-hand-usd.csv"
+>>>>>>> 6f41263acb2c6d36f36fc0be80560b9e6f3c0864
 
 empty_list = []
 
-with pal.open(mode="r", encoding="UTF-8") as file:
+with coh.open(mode="r", encoding="UTF-8") as file:
     reader=csv.reader(file)
     for line in reader:
         empty_list.append(line)
        
-print(url_creator('USD','SGD'))
-curency = url_creator('USD','SGD')
-print(currency['Realtime Currency Exchange Rate']['5. Exchange Rate'])
+#print(url_creator('USD','SGD'))
+#curency = url_creator('USD','SGD')
+#print(currency['Realtime Currency Exchange Rate']['5. Exchange Rate'])
 
 <<<<<<< HEAD
 empty_list=[]
@@ -47,7 +51,7 @@ def Daily_checker(data):
         if cash_on_hand[i] <  cash_on_hand[i-1]:
             diff = cash_on_hand[i] - cash_on_hand[i-1]
             issues.append([days[i], diff])
-    print(issues)
+    print(f"[CASH DEFICIT] DAY:{days[i]}, AMOUNT: SGD{abs(diff)}")
         
 Daily_checker(empty_list)
 >>>>>>> 850e156af8ee6ca43f5fc6cd0726930ce4aaf242

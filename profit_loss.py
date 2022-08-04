@@ -4,10 +4,10 @@ import csv
 
 pal=Path.cwd()/"csv_reports"/"profit-and-loss-usd.csv"
 with pal.open(mode="r",encoding="UTF-8") as file:
-    empty_list=[]
+    netprof=[]
     reader=csv.reader(file)
     for line in reader:
-        empty_list.append(line)
+        netprof.append(line)
     
 def check(data):
     deficit=[]
@@ -21,34 +21,10 @@ def check(data):
         if profit_loss[index]<profit_loss[index-1]:
             diff=profit_loss[index] - profit_loss[index-1]
             deficit.append([days[index],diff])
-        
-    print(deficit)
-check(empty_list)
+            day=days[index]
+            diff=abs(diff)
+    print(f"[PROFIT DEFICIT] DAY:{day}, AMOUNT: SGD{diff}")
+check(netprof)
 
-    #data=empty_list
-    #emplist=[]
-    #for prof in data:
-        #emplist.append(prof[4])
     
-    #for netprof in emplist:
-        #floatprof=float(netprof)
-        #diff= floatprof[2]-floatprof[2-1]
-        #print(floatprof)
-      
-        #def prof(number):
-
-            
-            #if diff<0:
-                #print(f"PROFIT DEFICIT, {diff}")
-
-
-
-
-
-        
-        #if cash_diff<0:
-            #print(f"[NET PROFIT DEFICIT]] day")
-        
-    
-        
 
