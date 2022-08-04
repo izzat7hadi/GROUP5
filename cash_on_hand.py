@@ -1,18 +1,18 @@
 from pathlib import Path
 import csv
 import api
-pal=Path.cwd()/"csv_reports"/"cash-on-hand-usd.csv"
+coh=Path.cwd()/"csv_reports"/"cash-on-hand-usd.csv"
 
 empty_list = []
 
-with pal.open(mode="r", encoding="UTF-8") as file:
+with coh.open(mode="r", encoding="UTF-8") as file:
     reader=csv.reader(file)
     for line in reader:
         empty_list.append(line)
        
-print(url_creator('USD','SGD'))
-curency = url_creator('USD','SGD')
-print(currency['Realtime Currency Exchange Rate']['5. Exchange Rate'])
+#print(url_creator('USD','SGD'))
+#curency = url_creator('USD','SGD')
+#print(currency['Realtime Currency Exchange Rate']['5. Exchange Rate'])
 
 
 def Daily_checker(data):
@@ -31,6 +31,6 @@ def Daily_checker(data):
         if cash_on_hand[i] <  cash_on_hand[i-1]:
             diff = cash_on_hand[i] - cash_on_hand[i-1]
             issues.append([days[i], diff])
-    print(issues)
+    print(f"[CASH DEFICIT] DAY:{days[i]}, AMOUNT: SGD{abs(diff)}")
         
 Daily_checker(empty_list)
