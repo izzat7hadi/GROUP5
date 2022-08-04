@@ -6,13 +6,13 @@ from textwrap import indent
 from tkinter import Button
 from urllib import response
 
-import requests
-api_keys = "QL8Q3ZVY82Y2DS1F"
-url = "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=SGD&apikey={api_keys}"
-response = requests.get(url)
-info=response.json()
-exchange=info["Realtime Currency Exchange Rate"]["5. Exchange Rate"]
-print(exchange)
+#import requests
+#api_keys = "QL8Q3ZVY82Y2DS1F"
+#url = "https://www.alphavantage.co/query?function=FX_WEEKLY&from_symbol=USD&to_symbol=SGD&apikey={api_keys}"
+#response = requests.get(url)
+#info=response.json()
+
+#print(info)
 
 #print (response)
 #print(response.headers)
@@ -38,5 +38,18 @@ print(exchange)
    # pm_list.append(item["readings"]["pm25_one_hourly"])
 #print(pm_list)
 
+import requests
+
+def api_extractor() :
+
+    api_keys = "QL8Q3ZVY82Y2DS1F"
+    url = "https://www.alphavantage.co/query?function=FX_WEEKLY&from_symbol=USD&to_symbol=SGD&apikey=" + api_keys
+    response = requests.get(url)
+    info = response.json()
+    last_week_date = list (info['Time Series FX (Weekly)'].keys() [0])
+    last_week_closing = info ['Time Series FX (Weekly)'] [last_week_date] ['4.close']
+    return float(last_week_closing)
+
+print(api_extractor())
 
 
