@@ -21,6 +21,7 @@ def check(data):
         if profit_loss[index]<profit_loss[index-1]:
             diff=profit_loss[index] - profit_loss[index-1]
             deficit.append([days[index],diff])
+        
     print(deficit)
 check(empty_list)
 
