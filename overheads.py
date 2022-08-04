@@ -4,34 +4,29 @@ from pathlib import Path
 import csv
 from unicodedata import category
 
-pal=Path.cwd()/"csv_reports"/"overheads-day-45.csv"
+oh=Path.cwd()/"csv_reports"/"overheads-day-45.csv"
 
-with pal.open(mode="r", encoding="UTF-8") as file:
-    empty_list=[]
+with oh.open(mode="r", encoding="UTF-8") as file:
+    overheads=[]
+    category=[]
     reader=csv.reader(file)
+    next (reader)
     for line in reader:
-        empty_list.append(line)
-<<<<<<< HEAD
+        category.append(line[0])
+        overheads.append(line[1])
+        
+highest=[]
+for value in overheads:
+    value=float(value)
+    highest.append(value)
 
-def main(data):
-    highest=[]
+def check():
+    largest=-1
+    for each in (highest):
+        if each>largest:
+            largest=each
+            index=(highest.index(largest))
+    print('[HIGHEST OVERHEAD]',category[index],',',largest)
 
-    category = list(index[0] for index in data[1:])
-    overheads = list((index[1]) for index in data [1:])
-    highest.append([category,overheads])
-   
-    for index in range(len(category)):
-     if (index==0):
-            continue 
-     largestvalue= -1
-    
-    for each in overheads :
-          if each > largestvalue :
-            largestvalue = each
-            highest.append([overheads,largestvalue ])
-    print(each)
-main(empty_list) 
-=======
-    print(line)
->>>>>>> 850e156af8ee6ca43f5fc6cd0726930ce4aaf242
+check()
 
