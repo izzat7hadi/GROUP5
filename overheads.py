@@ -11,6 +11,7 @@ with pal.open(mode="r", encoding="UTF-8") as file:
     reader=csv.reader(file)
     for line in reader:
         empty_list.append(line)
+<<<<<<< HEAD
 
 def main(data):
     highest=[]
@@ -30,4 +31,7 @@ def main(data):
             highest.append([overheads,largestvalue ])
     print(each)
 main(empty_list) 
+=======
+    print(line)
+>>>>>>> 850e156af8ee6ca43f5fc6cd0726930ce4aaf242
 
