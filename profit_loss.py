@@ -12,4 +12,4 @@ with pal.open(mode="r",encoding="UTF-8") as file:
 
 
 
->>>>>>> cfe0d4c3e6036e09c2669d222613407c547c333a
+>>>>>>> cfe0d4c3e6036e09c2669d222613407c547c33
